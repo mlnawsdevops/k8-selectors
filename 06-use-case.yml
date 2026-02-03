@@ -33,8 +33,9 @@ metadata:
   name: web-server
 spec:
   replicas: 3
-  matchLabels:
-    app: web-server
+  selector:
+    matchLabels:
+      app: web-server
   template:
     metadata:
       labels:
