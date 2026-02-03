@@ -22,7 +22,9 @@ Ref: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
 ### antiaffinity
 1. anti attraction
 
+```
 1. requiredDuringSchedulingIgnoredDuringExecution = Hard match
 2. preferredDuringSchedulingIgnoredDuringExecution = Soft match
+```
 
 ![alt text](podaffinityandpodantiaffinity.svg)
