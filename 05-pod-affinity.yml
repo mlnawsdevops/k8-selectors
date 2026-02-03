@@ -1,3 +1,4 @@
+# pod affinity both pod-1 and pod-2 runs on same node
 apiVersion: v1 
 kind: Pod
 metadata:
@@ -29,3 +30,27 @@ spec:
   containers:
   - name: nginx
     image: nginx
+
+---
+# podAntiAffinty means the pod will not create on match Expressions
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: pod-3
+spec:
+  affinity: 
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+            - key: purpose
+              operator: In 
+              values:
+              - affinity
+          topologyKey: topology.kubernetes.io/zone
+  containers:
+  - name: nginx
+    image: nginx
+    
