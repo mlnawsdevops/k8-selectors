@@ -25,7 +25,7 @@ spec:
             operator: In 
             value: 
             - affinity
-        topology: topology.kubernetes.io/zone
+        topologyKey: topology.kubernetes.io/zone
   containers:
   - name: nginx
     image: nginx
