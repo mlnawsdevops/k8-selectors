@@ -34,6 +34,11 @@ spec:
             values: 
             - affinity
         topologyKey: topology.kubernetes.io/zone
+  tolerations:
+  - key: "hardware"
+    value: "gpu"
+    operator: "Equal"
+    effect: "NoSchedule"
   containers:
   - name: nginx
     image: nginx
