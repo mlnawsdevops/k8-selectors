@@ -44,13 +44,14 @@ spec:
       affinity: 
         # unlike the web-server labels and place each pod in diff nodes
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - weight: 100
-            podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app: web-server
-              topologyKey: kubernetes.io/hostname
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In 
+                values:
+                - web-server
+            topologyKey: kubernetes.io/hostname
         # like the redis labels and place each web-server pods in each redis-server pods
         podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
