@@ -1,7 +1,7 @@
 apiVersion: v1 
 kind: Pod
 metadata:
-  name: nginx
+  name: pod-1
   labels:
     purpose: affinity
 spec:
@@ -10,7 +10,7 @@ spec:
     image: nginx
 
 ---
-
+# this pod-2 will be run on only pod-1 node 
 apiVersion: v1 
 kind: Pod
 metadata:
