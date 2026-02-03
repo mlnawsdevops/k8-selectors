@@ -18,6 +18,7 @@ Ref: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
 
 ### affinity
 1. affinity means attraction
+2. pods/nodes will create on match Expressions
 
 ### antiaffinity
 1. pods/nodes will not create on match Expressions
