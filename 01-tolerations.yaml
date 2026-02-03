@@ -6,7 +6,7 @@ spec:
   containers:
   - name: nginx
     image: nginx
-  tolerations: # it will run in tainted node and normal nodes
+  tolerations: # it will run in tainted node or normal nodes
   - key: "hardware"
     value: "gpu"
     operator: "Equal"
