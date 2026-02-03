@@ -11,5 +11,5 @@ spec:
     value: "gpu"
     operator: "Equal"
     effect: "NoSchedule"
-  nodeSelector: # label node 
+  nodeSelector: # label node. it will select tainted node and pod run in that node because using tolerations
     hardware: gpu
