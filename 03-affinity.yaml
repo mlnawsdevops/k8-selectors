@@ -5,7 +5,7 @@ metadata:
 spec:
   affinity: # affinity = nodeSelector
     nodeAffinity:
-      requiredDuringSchedulingIgnoreDuringExecution:
+      requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
           - key: hardware
