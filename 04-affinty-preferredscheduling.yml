@@ -7,7 +7,7 @@ spec:
     nodeAffinity:
     # preferredscheduling means soft rule
       preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
+      - weight: 1 # 1st preference
         preference:
           matchExpressions:
           - key: another-node-label-key
