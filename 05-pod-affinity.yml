@@ -9,7 +9,12 @@ spec:
   containers:
   - name: nginx
     image: nginx
-  nodeSelector:
+  tolerations:
+  - key: "hardware"
+    value: "gpu"
+    operator: "Equal"
+    effect: "NoSchedule"
+  nodeSelector: # label node. it will select tainted node and pod run in that node because using tolerations
     hardware: gpu
 
 ---
