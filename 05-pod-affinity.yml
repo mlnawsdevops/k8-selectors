@@ -23,7 +23,7 @@ spec:
           matchExpressions:
           - key: purpose
             operator: In 
-            value: 
+            values: 
             - affinity
         topologyKey: topology.kubernetes.io/zone
   containers:
