@@ -20,7 +20,7 @@ Ref: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
 1. affinity means attraction
 
 ### antiaffinity
-1. anti attraction
+1. pods/nodes will not create on match Expressions
 
 ```
 1. requiredDuringSchedulingIgnoredDuringExecution = Hard match
