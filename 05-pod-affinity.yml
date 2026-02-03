@@ -9,6 +9,8 @@ spec:
   containers:
   - name: nginx
     image: nginx
+  nodeSelector:
+    hardware: gpu
 
 ---
 # this pod-2 will be run on only pod-1 node 
@@ -53,4 +55,4 @@ spec:
   containers:
   - name: nginx
     image: nginx
-    
+
