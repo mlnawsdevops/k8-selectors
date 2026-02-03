@@ -10,3 +10,4 @@ kubectl taint node ip-192-168-23-73.ec2.internal hardware=gpu:NoSchedule
 kubectl label nodes <your-node-name> disktype=ssd
 kubectl label nodes ip-192-168-23-73.ec2.internal hardware=gpu
 ```
+Ref: https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes/
